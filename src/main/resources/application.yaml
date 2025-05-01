@@ -8,14 +8,14 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     # 数据库连接信息
-    url: jdbc:mysql://182.92.127.179:3306/hmdp?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://your_ip:3306/hmdp?useSSL=false&serverTimezone=UTC
     username: root
-    password: Ljc13512881480!
+    password: your_password
   redis:
     # Redis连接信息
-    host: 182.92.127.179
-    port: 63790
-    password: Ljc13512881480!
+    host: your_ip
+    port: your_port
+    password: your_password
     # Redis连接池配置
     lettuce:
       pool:
