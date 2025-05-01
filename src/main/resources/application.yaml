@@ -1,0 +1,32 @@
+server:
+  # 后端服务端口
+  port: 8081
+spring:
+  application:
+    # 数据库名称
+    name: hmdp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    # 数据库连接信息
+    url: jdbc:mysql://182.92.127.179:3306/hmdp?useSSL=false&serverTimezone=UTC
+    username: root
+    password: Ljc13512881480!
+  redis:
+    # Redis连接信息
+    host: 182.92.127.179
+    port: 63790
+    password: Ljc13512881480!
+    # Redis连接池配置
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+  jackson:
+    default-property-inclusion: non_null # JSON处理时忽略非空字段
+mybatis-plus:
+  type-aliases-package: com.hmdp.entity # 别名扫描包
+logging:
+  level:
+    com.hmdp: debug
